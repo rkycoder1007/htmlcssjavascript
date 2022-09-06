@@ -14,6 +14,20 @@ const exit=document.querySelectorAll(".exit");
 const exitGame=document.querySelector(".exitGame");
 const heading=document.querySelector(".heading");
 const button=document.querySelectorAll("button");
+const restart=document.querySelector(".restart");
+
+restart.addEventListener("click",()=>{
+    gameInfo.classList.remove("inactive");
+    gameOver.classList.add("inactive");
+    gameDraw.classList.add("inactive");
+    count=0;
+    turn="X";
+    turnButton.innerText=`Turn ${turn}`;
+    innerBox.forEach((value)=>{
+        value.innerText="";
+        value.style.backgroundColor="#FFEEAF";
+    })
+})
 
 button.forEach((value)=>{
     let buttonclick=new Audio("Audio/buttonclicksound.wav");
@@ -21,6 +35,7 @@ button.forEach((value)=>{
         buttonclick.play();
     })
 })
+
 
 let winnerperson="X";
 
@@ -69,6 +84,11 @@ innerBox.forEach((value)=>{
             
             
             if(matchWin()){
+                innerBox.forEach((value)=>{
+                    if(value.innerText===""){
+                        value.innerText="⭐";
+                    }
+                })
                 let winaudio=new Audio("Audio/wingameover.wav");
                 winaudio.play();
                 gameInfo.classList.add("inactive");
@@ -95,7 +115,6 @@ innerBox.forEach((value)=>{
 })
 
 playAgain.addEventListener("click",()=>{
-    console.log("play again");
              gameInfo.classList.remove("inactive");
             gameOver.classList.add("inactive");
             gameDraw.classList.add("inactive");

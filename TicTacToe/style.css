@@ -104,6 +104,14 @@ button:hover{
 .bottomBorder{
     border-bottom: none;
 }
+.turn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.restart{
+    background-color: orange;
+}
 
 .inactive{
     display: none;
@@ -115,3 +123,4 @@ button:hover{
         align-items: center;
     }
 }
+
