@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="gameContainer">
+        <h1 class="heading">Welcome To Tic Tac Toe Game</h1>
+        <div class="gameBox">
+            <div class="info">
+                <button class="startGame">Start Game</button>
+                 <div class="turn inactive"><button class="turnButton">Turn X</button></div>
+            </div>
+            <div class="gameOver inactive">
+                <h2>Game Over</h2>
+                <h2><span class="winner">X</span> WON</h2>
+                <h2>⭐⭐⭐⭐⭐</h2>
+                 <div class="playAgain"><button>Play Again</button></div>
+                 <div class="exit"><button>Exit</button></div>
+            </div>
+            <div class="gameDraw inactive">
+                <h2 style="font-size:40px; color:blue;">Match Draw</h2>
+                 <div class="drawPlayAgain"><button>Play Again</button></div>
+                 <div class="exit"><button>Exit</button></div>
+            </div>
+            <div class="exitGame inactive">
+                <h2 style="font-size:40px; color:blue;">Thank You For Playing</h2>
+            </div>
+
+            <div class="box inactive">
+                <div class="innerBox leftBorder topBorder 1"></div>
+                <div class="innerBox topBorder 2"></div>
+                <div class="innerBox rightBorder topBorder 3"></div>
+                <div class="innerBox leftBorder 4"></div>
+                <div class="innerBox 5"></div>
+                <div class="innerBox rightBorder 6"></div>
+                <div class="innerBox leftBorder bottomBorder 7"></div>
+                <div class="innerBox bottomBorder 8"></div>
+                <div class="innerBox rightBorder bottomBorder 9"></div>
+            </div>
+        </div>
+        
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

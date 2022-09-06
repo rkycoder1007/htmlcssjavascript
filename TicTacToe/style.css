@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameContainer{
+    width: fit-content;
+    height: fit-content;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:2rem;
+    border:2px solid red;
+    text-align: center;
+    background-color: #FFEEAF;
+}
+.heading{
+    padding:1rem;
+    padding-bottom: 2rem;
+    font-size: 3.5rem;
+    color:#277BC0;
+}
+.gameBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameOver h2{
+    color:green;
+    font-size:3rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.gameOver h2 span{
+    color:green;
+}
+button{
+    padding:.5rem 1rem;
+    font-size: 3rem;
+    margin:0.5rem;
+    background-color: green;
+    border-radius: 0.5rem;
+    border: none;
+    color:white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+button:hover{
+    color:green;
+    background-color: white;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.innerBox{
+    width: 6rem;
+    height: 6rem;
+    color:#16213E;
+    font-weight: 700;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+    font-size:4.5rem;
+    cursor: pointer;
+}
+.innerBox:hover{
+    background-color: #d6c68b;
+}
+
+.leftBorder{
+    border-left: none;
+}
+.topBorder{
+    border-top: none;
+}
+.rightBorder{
+    border-right: none;
+}
+.bottomBorder{
+    border-bottom: none;
+}
+
+.inactive{
+    display: none;
+}
+
+@media (max-width:500px){
+    .gameBox{
+        flex-direction: column;
+        align-items: center;
+    }
+}
